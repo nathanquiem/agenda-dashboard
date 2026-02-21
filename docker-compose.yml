@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  agenda-dashboard:
+    build: .
+    container_name: agenda-dashboard
+    restart: always
+    ports:
+      - "3099:80"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
